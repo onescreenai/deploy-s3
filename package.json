@@ -1,0 +1,15 @@
+{
+  "name": "deploy-s3",
+  "version": "1.0.0",
+  "description": "Deploys file to s3 github action",
+  "main": "index.js",
+  "repository": "git@github.com:onescreenai/deploy-s3.git",
+  "author": "Robert Ozimek <robert@onescreen.ai>",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "@aws-sdk/client-s3": "^3.319.0"
+  }
+}

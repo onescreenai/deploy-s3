@@ -1,0 +1,32 @@
+name: Deploy to S3
+description: 'Deploy files to S3'
+author: 'Robert Ozimek'
+inputs:
+  aws_access_key_id:
+    description: 'AWS Access Key Id'
+    required: true
+  aws_secret_access_key:
+    description: 'AWS Secret Access Key'
+    required: true
+  region:
+    description: 'AWS Region'
+    default: 'us-east-1'
+    required: false
+  bucket:
+    description: 'AWS Bucket Name'
+    required: true
+  source_path:
+    description: 'Source path of files to deploy'
+    required: true
+  destination_path:
+    description: 'Destination path of bucket for source files'
+    default: /
+    required: false
+outputs:
+  object_key:
+    description: 'object key'
+  object_location:
+    description: 'object location'
+runs:
+  using: 'node16'
+  main: 'index.js'
